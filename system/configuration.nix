@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { inputs, config, pkgs, ... }:
-let 
-    tokyo-night-sddm = pkgs.libsForQt5.callPackage ./sddm.nix { };
-in 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -15,7 +12,13 @@ in
       ./base.nix
     ];
  
-  services.xserver.displayManager.sddm.theme = "tokyo-night-sddm"; environment.systemPackages = with pkgs; [ tokyo-night-sddm ];
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      sddm.enable = true;
+      sddm.theme  = "${import ./sddm-theme.nix { inherit pkgs; }}"; 
+    };
+  };
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

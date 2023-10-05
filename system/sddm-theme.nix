@@ -1,11 +1,10 @@
 { pkgs }:
-
 let
-  imgLink = "https://YOURIMAGELINK/image.png";
+  imgLink = "https://github.com/SaverioMonaco/dotfiles/blob/main/assets/greeter.jpg";
 
   image = pkgs.fetchurl {
     url = imgLink;
-    sha256 = "sha256-HrcYriKliK2QN02/2vFK/osFjTT1NamhGKik3tozGU0=";
+    sha256 = "sha256-L375OkrKmu6CuIbXqzjPY/x+idg5ivXqoWHj+he/mu0=";
   };
 in
 pkgs.stdenv.mkDerivation {

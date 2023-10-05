@@ -27,6 +27,7 @@
     xdg-desktop-portal-hyprland
     xdg-utils
     xwayland
+    libsForQt5.qt5.qtgraphicaleffects
 
     # Screen shot & share
     ffmpeg_6-full
