@@ -1,6 +1,6 @@
 { pkgs }:
 let
-  imgLink = "https://raw.githubusercontent.com/SaverioMonaco/dotfiles/main/assets/greeter.ppg";
+  imgLink = "https://raw.githubusercontent.com/SaverioMonaco/dotfiles/main/assets/greeter.png";
 
   image = pkgs.fetchurl {
     url = imgLink;
