@@ -27,8 +27,9 @@
     xdg-desktop-portal-hyprland
     xdg-utils
     xwayland
-    libsForQt5.qt5.qtgraphicaleffects
-
+    libsForQt5.qt5.qtgraphicaleffects # for the sddm theme
+    swaylock-effects
+    
     # Screen shot & share
     ffmpeg_6-full
     gphoto2

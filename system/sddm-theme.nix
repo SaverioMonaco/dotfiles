@@ -4,7 +4,7 @@ let
 
   image = pkgs.fetchurl {
     url = imgLink;
-    # sha256 = "sha256-d+TJnfgi3y78QrNReObtzmKOKtjFR2ATI1S7r32jRUQ=";
+    sha256 = "sha256-ZVqqjB3Sv8hUrXrwv0UoOVPwASMqlOpjcpgy0nriwgo=";
   };
 
   repo = pkgs.fetchFromGitHub {

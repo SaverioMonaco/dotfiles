@@ -11,8 +11,8 @@ DimBackgroundImage="0.0"
 ScaleImageCropped="true"
 ## Whether the image should be cropped when scaled proportionally. Setting this to false will fit the whole image instead, possibly leaving white space. This can be exploited beautifully with illustrations (try it with "undraw.svg" included in the theme).
 
-ScreenWidth="1920"
-ScreenHeight="1080"
+ScreenWidth="1366"
+ScreenHeight="768"
 ## Adjust to your resolution to help SDDM speed up on calculations
 
 
@@ -47,7 +47,7 @@ MainColor="#ffffd9"
 ## Colors can be HEX or Qt names (e.g. red/salmon/blanchedalmond). See https://doc.qt.io/qt-5/qml-color.html
 
 #AccentColor="#a93e34"
-AccentColor="#fb9a33"
+AccentColor="#d42424"
 #AccentColor="#211023"
 ## Used for elements in focus/hover/pressed. Should be contrasting to the background and the MainColor to achieve the best effect.
 
@@ -120,7 +120,7 @@ DateFormat="dddd, d MMMM yyyy"
 
 ## [Translations]
 
-HeaderText="Looking cool!"
+HeaderText=""
 ## Header can be empty to not display any greeting at all. Keep it short.
 
 ## SDDM may lack proper translation for every element. Suger defaults to SDDM translations. Please help translate SDDM as much as possible for your language: https://github.com/sddm/sddm/wiki/Localization. These are in order as they appear on screen.
