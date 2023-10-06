@@ -1,25 +1,32 @@
 { pkgs }:
 let
-  imgLink = "https://github.com/SaverioMonaco/dotfiles/blob/main/assets/greeter.jpg";
+  imgLink = "https://raw.githubusercontent.com/SaverioMonaco/dotfiles/main/assets/greeter.ppg";
 
   image = pkgs.fetchurl {
     url = imgLink;
-    sha256 = "sha256-L375OkrKmu6CuIbXqzjPY/x+idg5ivXqoWHj+he/mu0=";
+    # sha256 = "sha256-d+TJnfgi3y78QrNReObtzmKOKtjFR2ATI1S7r32jRUQ=";
   };
+
+  repo = pkgs.fetchFromGitHub {
+    owner = "ArtemSmaznov";
+    repo = "SDDM-themes";
+    rev = "eff498d2b09692c91e318026adbfa1ea440f6d5d";
+    sha256 = "sha256-GVJRSQrnh7fEtDJ1wwhi/A70WaKLuce9/G+4XvvDc70=";
+  };
+
+  theme = import ./sddm-theme-conf.nix;
 in
 pkgs.stdenv.mkDerivation {
   name = "sddm-theme";
-  src = pkgs.fetchFromGitHub {
-    owner = "MarianArlt";
-    repo = "sddm-sugar-dark";
-    rev = "ceb2c455663429be03ba62d9f898c571650ef7fe";
-    sha256 = "0153z1kylbhc9d12nxy9vpn0spxgrhgy36wy37pk6ysq7akaqlvy";
-  };
+  src = "${repo}/sugar-candy";
   installPhase = ''
     mkdir -p $out
     cp -R ./* $out/
     cd $out/
-    rm Background.jpg
-    cp -r ${image} $out/Background.jpg
+    rm Backgrounds/distance-sunset.jpg
+    rm theme.conf
+    cp -r ${image} $out/Backgrounds/distance-sunset.jpg
+    echo -e "${theme.conf}" >> $out/theme.conf
    '';
 }
+
