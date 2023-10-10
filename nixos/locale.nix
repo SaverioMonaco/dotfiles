@@ -1,6 +1,6 @@
  {
   # Set your time zone.
-  time.timeZone = "Rome/Italy";
+  time.timeZone = "Europe/Rome";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -21,8 +21,6 @@
     xserver = {
       layout = "it";
       xkbVariant = "";
-      enable = true;
-      displayManager.sddm.enable = true;
       # Enable touchpad
       libinput.enable = true;
     };

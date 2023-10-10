@@ -58,6 +58,7 @@
   bat
   htop
   neofetch
+  ranger
   
   # PROGRAMMING
   vscode

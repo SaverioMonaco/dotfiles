@@ -1,6 +1,5 @@
 {
-
-#shellAliases
+  #shellAliases
   programs.bash.shellAliases = {
     #################
     # NIXOS RELATED #
@@ -11,7 +10,4 @@
     nixclean    = "sudo nix-collect-garbage -d";
     nixcleanold = "sudo nix-collect-garbage --delete-old";
   };
-
-  # starship
-  # programs.starship.enable = true;
 }

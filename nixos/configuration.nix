@@ -4,7 +4,7 @@
   inputs,
   lib,
   config,
-  pkgs,.
+  pkgs,
   ...
 }: {
   # You can import other NixOS modules here
@@ -19,6 +19,7 @@
     ./networking.nix
     ./gnomede.nix
     ./boot.nix
+    ./shell.nix
   ];
 
   nixpkgs = {
