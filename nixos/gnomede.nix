@@ -1,5 +1,7 @@
 { pkgs, ... }: 
 {
+  # https://nixos.wiki/wiki/GNOME
+
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
