@@ -1,38 +1,57 @@
 {
-  description = "Your new nix config";
+  description = "My humble Nix config!";
+  
+  nixConfig = {
+    # manage flakes 
+    experimental-features = [ "nix-command" "flakes" ];
+  };
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-23.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # Home Manager
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
-
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+    # Hyprland window manager 
+    hyprland.url = "github:hyprwm/Hyprland";
+    # Community scripts and utilities for Hypr projects
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs: 
+  let 
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config = { allowUnfree = true; };
+    };
+    lib = nixpkgs.lib;
+
   in {
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      joker = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
-      };
+      nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs system; };
+        modules = [
+          ./system/configuration.nix 
+          hyprland.nixosModules.default
+          { programs.hyprland.enable = true; }
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.saverio = import ./home/home.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+          }
+        ];
+      }; 
     };
   };
 }
