@@ -11,7 +11,7 @@
      git
      vscode
      firefox
-     swaylock-effects swayidle wlogout swaybg  #Login etc..  
+     swaylock-effects swayidle wlogout swww    #Login etc..  
      waybar                                    #topbar 
      wayland-protocols
      libsForQt5.qt5.qtwayland

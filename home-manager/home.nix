@@ -65,7 +65,7 @@
 	    GTK_USE_PORTAL = "1";
 	    NIXOS_XDG_OPEN_USE_PORTAL = "1";
 	    XDG_CACHE_HOME = "\${HOME}/.cache";
-	    XDG_CONFIG_HOME = "\${HOME}/dotfiles/config";
+	    XDG_CONFIG_HOME = "\${HOME}/.config";
 	    XDG_BIN_HOME = "\${HOME}/.local/bin";
 	    XDG_DATA_HOME = "\${HOME}/.local/share";
     };

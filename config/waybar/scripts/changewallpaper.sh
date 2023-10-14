@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR=$HOME/Desktop/wallpapers
+DIR=$HOME/dotfiles/wallpapers
 PICS=($(ls ${DIR}))
 
 RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
