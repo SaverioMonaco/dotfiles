@@ -1,5 +1,12 @@
-{ config, pkgs, lib, inputs, modulesPath, ... }:
-
+# This is your system's configuration file.
+# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: 
 {
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
@@ -8,16 +15,15 @@
 
 # Include the results of the hardware scan.
     imports = [
-      ./hardware-configuration.nix 
-      ./shell.nix
-      ./users.nix
-    ];
+    ./hardware-configuration.nix 
+    ./shell.nix
+    ./users.nix];
 
 
   #ntfs support
   boot.supportedFilesystems = [ "ntfs" ];
   # Fonts
-    fonts.packages = with pkgs; [
+    fonts.fonts = with pkgs; [
       font-awesome
      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Iosevka" ]; })
      ];
@@ -130,7 +136,6 @@
   # $ nix search wget
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
- # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      zig
      wget
      killall
@@ -139,7 +144,6 @@
   ];
 
 
-  nixpkgs.config.allowUnfree = true;
   #Firewall
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -148,6 +152,7 @@
   # Or disable the firewall altogether.
    networking.firewall.enable = false;
 
+  nixpkgs.config.allowUnfree = true;
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -157,5 +162,3 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }
-
-
