@@ -24,6 +24,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
   # Fonts
     fonts.packages = with pkgs; [
+      ubuntu_font_family
       font-awesome
      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Iosevka" ]; })
      ];

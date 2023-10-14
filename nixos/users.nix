@@ -14,6 +14,7 @@
      swaylock-effects swayidle wlogout swww    #Login etc..  
      waybar                                    #topbar 
      wayland-protocols
+     hyprpicker
      libsForQt5.qt5.qtwayland
      kanshi                                    #laptop dncies
      rofi mako rofimoji                        #Drawer + notifications

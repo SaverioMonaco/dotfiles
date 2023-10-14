@@ -1,49 +1,43 @@
 {
     "height": 20, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
-    "modules-left": ["custom/launcher","temperature", "cpu", "memory", "custom/weather", "wlr/workspaces"],
+    "modules-left": ["custom/logo", "hyprland/workspaces"],
     "modules-center": ["mpris"],
-    "modules-right": [ "network", "pulseaudio",  "backlight", "battery", "clock", "custom/wallpaper","tray","custom/power-menu"],
-    "wlr/workspaces": {
-      "format": "{icon}",
-      "all-outputs": true,
-      "on-click": "activate",
-      "format-icons": {
-        "active": " 󰮯",
-        "default": "󰌽",
-      }
-    },
+    "modules-right": ["custom/picker", "network", "pulseaudio",  "backlight", "battery", "clock","bluetooth"],
+
     "hyprland/window": {
         "format": "{}"
         
     },
-    "tray": {
-        "spacing": 10
+
+    "hyprland/workspaces": {
+        "active-only": false,
+        "all-outputs": true,
+        "disable-scroll": true,
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+        			// "1": "",
+        			// "2": "",
+        			// "3": "",
+        			// "4": "",
+        			// "5": "",
+                    // "6": "",
+        			// "7": "",
+        			// "8": "",
+        			// "9": "",
+            "active": "",
+			"urgent": "",
+			"default": "",
+    "sort-by-number": true
     },
+    },
+
     "clock": {
         "format": "{:%H:%M}",
-        "format-alt": "{:%b %d %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
 
-    "cpu": {
-      "interval": 10,
-      "format": "  {}%",
-      "max-length": 10,
-      "on-click": "",
-    },
-    "memory": {
-        "interval": 30,
-        "format": " {}%",
-        "format-alt":" {used:0.1f}GB",
-        "max-length": 10,
-    },
-    "temperature": {
-        "interval": 10,
-        "format": " {temperatureC}°C",
-        "format-alt":"temprature",
-        "max-length": 10,
-    },
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon}",
@@ -57,7 +51,7 @@
     },
     "network": {
         /* "format-wifi": "直", */
-        "format-wifi": "<small>{bandwidthUpBytes}↑ {bandwidthDownBytes}↓</small> {icon}",
+        "format-wifi": "{icon}",
         "format-ethernet": "󰈀",
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid}",
@@ -68,14 +62,16 @@
     },
            "bluetooth": {
                 "format": "{icon}",
-                "format-alt": "bluetooth: {status}",
                 "interval": 30,
                 "format-icons": {
                      "enabled": "",
                      "disabled": "󰂲"
                   
                 },
-                "tooltip-format": "{status}"
+                "on-click": "bluetooth toggle",
+                "on-click-right": "exec blueman-manager",
+                "tooltip-format": "{status}",
+                "spacing": 10
            },
 
     "pulseaudio": {
@@ -114,50 +110,21 @@
       "format-full": "󰚥", 
       "format-icons": ["󱊡", "󱊢", "󱊣"]
     },
-    "custom/weather": {
-      "exec": "nix-shell ~/.config/waybar/scripts/weather.py",
-      "restart-interval": 300,
-      "return-type": "json",
-    },   
-   "custom/lock": {
-       "tooltip" : false,
-       "on-click": "swaylock",
-       "format" : "",
-    },
-    
+
       "mpris": {
-  	"format": "{player_icon} {title}",
-  	"format-paused": " {status_icon} <i>{title}</i>",
-  	"player-icons": {
-  		"default": "▶",
-  		"mpv": "🎵"
-  	},
-  	"status-icons": {
-  		"paused": "⏸"
-  	},
+  	"format": " ⏸ <i>{title}</i>",
+  	"format-paused": " ▶ <i>{title}</i>",
+    "interval" : 1 
   	// "ignored-players": ["firefox"]
   },
         
-
-    
-   "custom/spotify": {
-        "exec": "nix-shell ~/.config/waybar/scripts/mediaplayer.py --player youtube-music",
-        "format": " {}",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-double-click-right": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-    },
-    "custom/power-menu": {
-        "format": " ⏻ ",
-        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
-    }, 
-    "custom/launcher": {
+    "custom/logo": {
         "format": "󱄅",
-        "on-click": "rofi -show drun &",
+        "on-click": "wlogout",
     },
-    "custom/wallpaper": {
-       "format": " 󰔉 ",
-       "on-click": "bash ~/.config/waybar/scripts/changewallpaper.sh",
-    } 
+
+    "custom/picker" : {
+        "format": "",
+        "on-click": "hyprpicker",
+    }
 }
