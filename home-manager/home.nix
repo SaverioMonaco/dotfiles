@@ -1,4 +1,8 @@
 { config, pkgs, self, user, ... }:
+let 
+  cursor-theme = "Qogir";
+  cursor-package = pkgs.qogir-icon-theme;
+in
 {
 
   imports = [
@@ -10,6 +14,16 @@
   # paths it should manage.
   home.username = "${user}";
   home.homeDirectory = "/home/${user}";
+
+  home = {
+    sessionVariables.XCURSOR_THEME = cursor-theme;
+    pointerCursor = {
+      package = cursor-package;
+      name = cursor-theme;
+      size = 24;
+      gtk.enable = true;
+    };
+  };
 
   #Gtk 
     gtk = {
@@ -23,7 +37,10 @@
         name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
       };
-
+      cursorTheme = {
+        name = cursor-theme;
+        package = cursor-package;
+      };
       gtk3.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1

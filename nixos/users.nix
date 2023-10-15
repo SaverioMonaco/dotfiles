@@ -11,6 +11,7 @@
      git
      vscode
      firefox
+     qogir-icon-theme
      swaylock-effects swayidle wlogout swww    #Login etc..
      grim
      wl-gammactl wl-clipboard hyprpicker # TODO: DO I need both dependencies for Hyprpicker?  
