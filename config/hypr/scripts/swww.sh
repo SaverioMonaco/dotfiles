@@ -1,0 +1,2 @@
+swww kill
+swww init

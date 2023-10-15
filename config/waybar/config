@@ -1,5 +1,5 @@
 {
-    "height": 20, // Waybar height (to be removed for auto height)
+    // "height": 20, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
     "modules-left": ["custom/logo", "hyprland/workspaces"],
     "modules-center": ["mpris"],
@@ -7,30 +7,20 @@
 
     "hyprland/window": {
         "format": "{}"
-        
     },
 
     "hyprland/workspaces": {
         "active-only": false,
         "all-outputs": true,
         "disable-scroll": true,
-		"format": "{icon}",
-		"on-click": "activate",
-		"format-icons": {
-        			// "1": "",
-        			// "2": "",
-        			// "3": "",
-        			// "4": "",
-        			// "5": "",
-                    // "6": "",
-        			// "7": "",
-        			// "8": "",
-        			// "9": "",
-            "active": "",
-			"urgent": "",
-			"default": "",
-    "sort-by-number": true
-    },
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active":  "",
+            "urgent":  "",
+            "default": "",
+            "sort-by-number": true
+        },
     },
 
     "clock": {
