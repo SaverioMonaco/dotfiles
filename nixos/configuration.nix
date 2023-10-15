@@ -23,7 +23,8 @@
   #ntfs support
   boot.supportedFilesystems = [ "ntfs" ];
   # Fonts
-    fonts.fonts = with pkgs; [
+    fonts.packages = with pkgs; [
+      ubuntu_font_family
       font-awesome
      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Iosevka" ]; })
      ];
@@ -142,7 +143,6 @@
      neofetch
      gh
   ];
-
 
   #Firewall
   # Open ports in the firewall.

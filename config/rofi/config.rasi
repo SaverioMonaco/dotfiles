@@ -213,7 +213,7 @@ element normal.active {
 }
 element selected.normal {
     background-color:            var(selected-normal-background);
-    text-color:                  var(selected-normal-foreground);
+    text-color:                  #000000;
 }
 element selected.urgent {
     background-color:            var(selected-urgent-background);
@@ -221,7 +221,7 @@ element selected.urgent {
 }
 element selected.active {
     background-color:            var(selected-active-background);
-    text-color:                  var(selected-active-foreground);
+    text-color:                  #000000;
 }
 element alternate.normal {
     background-color:            var(alternate-normal-background);
@@ -241,6 +241,7 @@ element-icon {
     size:                        24px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -273,7 +274,7 @@ button {
 }
 button selected {
     background-color:            var(selected-normal-background);
-    text-color:                  var(selected-normal-foreground);
+    text-color:                  #000000;
 }
 
 /*****----- Message -----*****/
