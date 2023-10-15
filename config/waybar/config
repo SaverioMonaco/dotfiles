@@ -3,7 +3,7 @@
     "layer": "top", // Waybar at top layer
     "modules-left": ["custom/logo", "hyprland/workspaces"],
     "modules-center": ["mpris"],
-    "modules-right": ["custom/picker", "network", "pulseaudio",  "backlight", "battery", "clock","bluetooth"],
+    "modules-right": ["custom/picker", "custom/separator", "bluetooth", "network", "pulseaudio",  "backlight", "battery", "clock"],
 
     "hyprland/window": {
         "format": "{}"
@@ -125,6 +125,12 @@
 
     "custom/picker" : {
         "format": "",
-        "on-click": "hyprpicker",
-    }
+        "on-click": "sleep .2; hyprpicker -a",
+    },
+
+    "custom/separator": {
+        "format": "  ",
+        "interval": "once",
+        "tooltip": false
+    },
 }
