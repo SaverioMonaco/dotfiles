@@ -68,6 +68,7 @@
 
     # Setting stuff
     gnome3.gnome-tweaks
+    avell-unofficial-control-center
   ];
 
   # Enable home-manager and git
