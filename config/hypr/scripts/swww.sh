@@ -1,2 +1,0 @@
-swww kill
-swww init
