@@ -29,6 +29,8 @@
     tmux
     neofetch
     nnn # terminal file manager
+    fzf
+    zoxide
 
     # archives
     zip
@@ -60,6 +62,7 @@
     initContent = ''
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
       bindkey '\t\t' autosuggest-accept # double tab : accept suggestion
+      eval "$(zoxide init zsh)"
     '';
 
     shellAliases = {
