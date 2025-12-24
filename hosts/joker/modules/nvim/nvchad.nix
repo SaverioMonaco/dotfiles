@@ -1,0 +1,5 @@
+{
+  programs.nvchad = {
+    enable = true;
+  };
+}
