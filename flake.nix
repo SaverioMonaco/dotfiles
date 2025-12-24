@@ -12,15 +12,15 @@
     xremap-flake.url = "github:xremap/nix-flake";
 
     # adding the starter input here
-    nvchad-starter = {
-      url = "path:./config/nvim"; # <- for local relative folder (e.g. path:./home/nvim) 
+    mynvchad = {
+      url = "github:SaverioMonaco/nvchad"; # <- for local relative folder (e.g. path:./home/nvim) 
       flake = false;
     };
 
     nix4nvchad = {
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nvchad-starter.follows = "nvchad-starter"; # <- overwrite the module input here
+      inputs.nvchad-starter.follows = "mynvchad"; # <- overwrite the module input here
     };
   };
 
