@@ -11,9 +11,16 @@
     # Remap keys, to swap CAPS and Esc
     xremap-flake.url = "github:xremap/nix-flake";
 
+    # adding the starter input here
+    nvchad-starter = {
+      url = "path:./config/nvim"; # <- for local relative folder (e.g. path:./home/nvim) 
+      flake = false;
+    };
+
     nix4nvchad = {
-          url = "github:nix-community/nix4nvchad";
-          inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nvchad-starter.follows = "nvchad-starter"; # <- overwrite the module input here
     };
   };
 

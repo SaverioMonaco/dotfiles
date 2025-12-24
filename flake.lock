@@ -471,7 +471,9 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "nvchad-starter": "nvchad-starter"
+        "nvchad-starter": [
+          "nvchad-starter"
+        ]
       },
       "locked": {
         "lastModified": 1766128535,
@@ -600,19 +602,14 @@
     "nvchad-starter": {
       "flake": false,
       "locked": {
-        "lastModified": 1753939018,
-        "narHash": "sha256-xdLr6tlU9uA+wu0pqha2br0fdVm+1MjgjbB5awz9ICU=",
-        "owner": "NvChad",
-        "repo": "starter",
-        "rev": "e3572e1f5e1c297212c3deeb17b7863139ce663e",
-        "type": "github"
+        "path": "./config/nvim",
+        "type": "path"
       },
       "original": {
-        "owner": "NvChad",
-        "ref": "main",
-        "repo": "starter",
-        "type": "github"
-      }
+        "path": "./config/nvim",
+        "type": "path"
+      },
+      "parent": []
     },
     "pre-commit-hooks": {
       "inputs": {
@@ -643,6 +640,7 @@
         "home-manager": "home-manager",
         "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs",
+        "nvchad-starter": "nvchad-starter",
         "xremap-flake": "xremap-flake"
       }
     },
