@@ -1,0 +1,66 @@
+[open]
+rules = [
+  # Text / code → nvim
+  { mime = "text/*", use = "edit" },
+  { name = "*.md", use = "edit" },
+  { name = "*.txt", use = "edit" },
+  { name = "*.rs", use = "edit" },
+  { name = "*.py", use = "edit" },
+  { name = "*.lua", use = "edit" },
+  { name = "*.toml", use = "edit" },
+  { name = "*.json", use = "edit" },
+  { name = "*.yaml", use = "edit" },
+  { name = "*.yml", use = "edit" },
+
+  # PDF
+  { mime = "application/pdf", use = "pdf" },
+
+  # Images
+  { mime = "image/*", use = "image" },
+
+  # Video
+  { mime = "video/*", use = "video" },
+
+  # Audio
+  { mime = "audio/*", use = "audio" },
+  
+  # Archives
+  { mime = "application/zip", use = "archive" },
+  { mime = "application/x-tar", use = "archive" },
+  { mime = "application/x-7z-compressed", use = "archive" },
+  { mime = "application/x-rar", use = "archive" },
+]
+
+[opener]
+# Neovim for text/code
+edit = [
+  { run = 'nvim "$@"', block = true, for = "unix" }
+]
+
+# PDF viewer (pick ONE: zathura / evince / okular)
+pdf = [
+  { run = 'evince "$@"', block = false, for = "unix" }
+]
+
+# Image viewer (sxiv / feh / imv)
+image = [
+  { run = 'qimgv "$@"', block = false, for = "unix" }
+]
+
+# Video player
+video = [
+  { run = 'vlc "$@"', block = false, for = "unix" }
+]
+
+# Audio
+audio = [
+  { run = 'vlc "$@"', block = false, for = "unix" }
+]
+
+# Archives
+archive = [
+  { run = 'file-roller "$@"', block = false }
+]
+
+[preview]
+image = true

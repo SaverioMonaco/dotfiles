@@ -83,6 +83,24 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  
+  # Joker brightness fix
+  programs.light.enable = true;
+  services.actkbd = {
+    enable = true;
+    bindings = [
+      { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
+      { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
+    ];
+  };
+
+  programs.hyprland = {
+    enable = true;
+    # set the flake package
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # make sure to also set the portal package, so that they are in sync
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -144,8 +162,9 @@
     # these should be self explanatory
     gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-contacts
     gnome-font-viewer gnome-logs gnome-maps gnome-music gnome-photos gnome-screenshot
-    gnome-system-monitor gnome-weather gnome-disk-utility pkgs.gnome-connections
-    gnome-console
+    gnome-weather gnome-disk-utility pkgs.gnome-connections
+    gnome-console gnome-system-monitor 
+    
   ];
 
 }

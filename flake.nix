@@ -22,6 +22,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nvchad-starter.follows = "mynvchad"; # <- overwrite the module input here
     };
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

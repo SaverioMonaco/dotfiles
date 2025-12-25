@@ -7,12 +7,16 @@
       ./modules/git.nix
       ./modules/nvim/nvchad.nix
       ./modules/vscode.nix
+      ./modules/cursor.nix
 
       ./modules/terminal/tmux.nix
       ./modules/terminal/zsh.nix
       ./modules/terminal/bash.nix
       ./modules/terminal/oh-my-posh.nix
       ./modules/terminal/foot.nix
+      ./modules/terminal/yazi.nix
+
+      ./modules/hypr
     ];
 
   home.username = "samonaco";
@@ -21,7 +25,6 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     neofetch
-    nnn # terminal file manager
     fzf
     zoxide
 
@@ -36,6 +39,14 @@
 
     # productivity
     btop  # replacement of htop/nmon
+    
+    kdePackages.dolphin # This is the actual dolphin package
+    file-roller # archive-manager
+    
+    # media
+    vlc
+    qimgv # image viewer
+    evince # pdf
   ];
 
   # This value determines the home Manager release that your
