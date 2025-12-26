@@ -1,0 +1,47 @@
+{
+  "editor.codeLens": false,
+  "editor.inlineSuggest.enabled": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
+
+  "nvim-ui.nvimColorNormal": "#81a1c1",
+  "nvim-ui.nvimColorInsert": "#C1E1C1",
+  "nvim-ui.nvimColorVisual": "#fefec8",
+  "nvim-ui.nvimColorReplace": "#c882e7",
+  "nvim-ui.nvimColorCustomizationKeys": [
+    "activityBarBadge.background",
+    "inputValidation.errorBorder",
+    "panel.border",
+    "panelTitle.activeBorder",
+    "panelTitle.activeForeground",
+    "peekView.border",
+    "peekViewTitleLabel.foreground",
+    "tab.activeBorder",
+    "statusBar.border",
+    "statusBar.background",
+    "activityBar.activeBorder"
+  ],
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#81a1c1",
+    "activityBarBadge.background": "#81a1c1",
+    "inputValidation.errorBorder": "#81a1c1",
+    "panel.border": "#81a1c1",
+    "panelTitle.activeBorder": "#81a1c1",
+    "panelTitle.activeForeground": "#81a1c1",
+    "peekView.border": "#81a1c1",
+    "peekViewTitleLabel.foreground": "#81a1c1",
+    "statusBar.border": "#81a1c1",
+    "activityBar.activeBorder": "#81a1c1",
+    "statusBar.background": "#81a1c1",
+    "statusBar.foreground": "#000000"
+  }
+}

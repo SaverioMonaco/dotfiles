@@ -26,6 +26,14 @@
       # Unbind default split keys
       unbind %
       unbind '"'
+
+      # Setup 'v' to begin selection as in Vim
+      bind-key -T copy-mode-vi v send -X begin-selection
+      bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+
+      # Update default binding of `Enter` to also use copy-pipe
+      unbind -T copy-mode-vi Enter
+      bind-key -T copy-mode-vi Enter send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
     '';
   };
 }

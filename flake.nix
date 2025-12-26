@@ -24,10 +24,12 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
-
+    
+    # Secrets management
+    agenix.url = "github:ryantm/agenix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, agenix, ... }@inputs:
     let
       lib = nixpkgs.lib;
     in {
