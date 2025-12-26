@@ -42,6 +42,11 @@ Add images
 | Wallpaper             | ???                         |
 
 
+## Resources
+* Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
+* Modularization: [Vimjoier: Modularization video](https://www.youtube.com/watch?v=vYc6IzKvAJQ)
+* Hyprland configs: [fufexan's dotfiles](https://github.com/fufexan/dotfiles) 
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
