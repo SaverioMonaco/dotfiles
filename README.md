@@ -52,6 +52,7 @@ Add images
 - Secrets
 - keyboard light control on joker
 - automatic collect garbage (boot option)
+- finish readme with images/showcase
 
 ## Resources
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
