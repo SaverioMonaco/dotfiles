@@ -10,6 +10,8 @@
 - [About](#-about)
 - [Showcase](#-showcase)
 - [Components](#-components)
+- [To Do](#~todo)
+- [Resources](#~resources)
 
 ## About
 
