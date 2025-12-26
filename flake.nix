@@ -1,6 +1,7 @@
 {
-  description = "My first flake!";
+  description = "Nix flake for my NixOS configuration. See https://github.com/SaverioMonaco/dotfiles";
 
+  # Define the flake inputs
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
     
@@ -11,18 +12,20 @@
     # Remap keys, to swap CAPS and Esc
     xremap-flake.url = "github:xremap/nix-flake";
 
-    # adding the starter input here
+    # NVChad configuration
+    # custom nvchad module
     mynvchad = {
-      url = "github:SaverioMonaco/nvchad"; # <- for local relative folder (e.g. path:./home/nvim) 
+      url = "github:SaverioMonaco/nvchad";
       flake = false;
     };
-
+    # official nix4nvchad module
     nix4nvchad = {
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nvchad-starter.follows = "mynvchad"; # <- overwrite the module input here
     };
 
+    # Hyprland window manager
     hyprland.url = "github:hyprwm/Hyprland";
     
     # Secrets management

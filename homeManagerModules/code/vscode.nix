@@ -12,6 +12,7 @@
         github.copilot
         ms-python.python # Python support
         ms-toolsai.jupyter # Jupyter Notebooks
+        tamasfe.even-better-toml # TOML support
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "nvim-ui-modifier";
