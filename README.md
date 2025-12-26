@@ -54,6 +54,7 @@ Add images
 - automatic collect garbage (boot option)
 - finish readme with images/showcase
 - hearthstone-linux
+- toggle-able vscode
 
 ## Resources
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
