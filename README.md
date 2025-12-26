@@ -41,6 +41,8 @@ Add images
 | Logout menu           | ???                         |
 | Wallpaper             | ???                         |
 
+## To Do
+- ~This list~
 
 ## Resources
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
