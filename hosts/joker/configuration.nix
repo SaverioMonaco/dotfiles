@@ -13,12 +13,12 @@
       ./../../nixosModules
 
       ./boot.nix
-      ./gnome.nix
-
       ./io/monitor.nix
       ./io/touchpad.nix
     ];
 
+  hyprland.enable = true;
+  gnome.enable = true;
     
   networking.hostName = "joker"; # Define your hostname.
   # Configure network connections interactively with nmcli or nmtui.
@@ -47,15 +47,6 @@
   #   enable = true;
   #   pulse.enable = true;
   # };
-
-  # Enable Hyprland
-  programs.hyprland = {
-    enable = true;
-    # set the flake package
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # make sure to also set the portal package, so that they are in sync
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

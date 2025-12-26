@@ -1,8 +1,15 @@
+{ lib, config, ... }:
 {
-  programs.brave = {
-    enable = true;
-    extensions = [
-      "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
-    ];
+  options = {
+    brave.enable = lib.mkEnableOption "enables Brave Browser";
+  };
+  
+  config = {
+    programs.brave = {
+      enable = config.brave.enable;
+      extensions = [
+        "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
+      ];
+    };
   };
 }
