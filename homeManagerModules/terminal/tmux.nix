@@ -8,6 +8,7 @@
     prefix = "C-b";
 
     extraConfig = ''
+      set -g default-terminal "tmux-256color"
       set -g set-clipboard on
 
       # --- Vim-style pane navigation ---
