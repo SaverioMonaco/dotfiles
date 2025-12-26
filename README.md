@@ -42,7 +42,14 @@ Add images
 | Wallpaper             | ???                         |
 
 ## To Do
-- ~This list~
+- Add all missing components in Components
+- Hyprland
+- Update Oh-My-Posh colors
+- configuration.nix for melchior
+- configuration.nix for cyrano
+- Secrets
+- keyboard light control on joker
+- automatic collect garbage (boot option)
 
 ## Resources
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
