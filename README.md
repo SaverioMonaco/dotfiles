@@ -7,11 +7,11 @@
 </div>
 
 ## Table of Contents
-- [About](#-about)
-- [Showcase](#-showcase)
-- [Components](#-components)
-- [To Do](#~todo)
-- [Resources](#~resources)
+- [About](#about)
+- [Showcase](#showcase)
+- [Components](#components)
+- [To Do](#to-do)
+- [Resources](#resources)
 
 ## About
 
