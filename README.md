@@ -55,6 +55,7 @@ Add images
 - finish readme with images/showcase
 - hearthstone-linux
 - toggle-able vscode
+- add office folder: slack, mattermost, mail (toggleable)
 
 ## Resources
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
