@@ -55,6 +55,7 @@ Add images
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)
 * Modularization: [Vimjoier: Modularization video](https://www.youtube.com/watch?v=vYc6IzKvAJQ)
 * Hyprland configs: [fufexan's dotfiles](https://github.com/fufexan/dotfiles) 
+* Hyprland dotfiles: [JaKooLit's dotfiles](https://github.com/JaKooLit/Hyprland-Dots)
 
 ## License
 
