@@ -1,22 +1,14 @@
 { inputs, config, pkgs, ... }:
 {
   imports = [
-      inputs.nix4nvchad.homeManagerModule
+      ./brave.nix
+      ./git.nix
+      ./nvim/nvchad.nix
+      ./vscode.nix
+      ./cursor.nix
 
-      ./modules/brave.nix
-      ./modules/git.nix
-      ./modules/nvim/nvchad.nix
-      ./modules/vscode.nix
-      ./modules/cursor.nix
-
-      ./modules/terminal/tmux.nix
-      ./modules/terminal/zsh.nix
-      ./modules/terminal/bash.nix
-      ./modules/terminal/oh-my-posh.nix
-      ./modules/terminal/foot.nix
-      ./modules/terminal/yazi.nix
-
-      ./modules/hypr
+      ./terminal
+      ./hypr
     ];
 
   home.username = "samonaco";

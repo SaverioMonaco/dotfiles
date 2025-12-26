@@ -8,12 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      
+      # Shared configurations
+      ./../../nixosModules
 
       ./boot.nix
       ./gnome.nix
 
       ./io/monitor.nix
-      ./io/keyboard.nix
       ./io/touchpad.nix
     ];
 

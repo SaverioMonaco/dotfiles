@@ -42,9 +42,8 @@
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.samonaco = import ./hosts/joker/home.nix;
+              home-manager.users.samonaco = import ./homeManagerModules;
               home-manager.extraSpecialArgs = { inherit inputs; };
-              # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix 
             }         
         ];
       };

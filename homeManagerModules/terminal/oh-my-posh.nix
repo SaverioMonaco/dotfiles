@@ -1,6 +1,6 @@
 {
   programs.oh-my-posh = {
     enable = true;
-    configFile = ../../../../config/EVAzshtheme.toml;
+    configFile = ./../../config/EVAzshtheme.toml;
   };
 }

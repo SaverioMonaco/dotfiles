@@ -12,6 +12,6 @@
       };
     in
       getFromTar
-        ../../../assets/cursors/Fuchsia-Blue.tar.gz
+        ./../assets/cursors/Fuchsia-Blue.tar.gz
         "Fuchsia-Blue";
 }

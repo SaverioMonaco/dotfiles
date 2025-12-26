@@ -5,5 +5,5 @@
         enableZshIntegration = true;
     };
 
-    xdg.configFile."yazi/yazi.toml".source = ../../../../config/yazi.toml;
+    xdg.configFile."yazi/yazi.toml".source = ./../../config/yazi.toml;
 }
