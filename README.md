@@ -47,15 +47,10 @@ Add images
 - Add all missing components in Components
 - Hyprland
 - Update Oh-My-Posh colors
-- configuration.nix for melchior
-- configuration.nix for cyrano
 - Secrets
-- keyboard light control on joker
 - automatic collect garbage (boot option)
 - finish readme with images/showcase
 - hearthstone-linux
-- toggle-able vscode
-- add office folder: slack, mattermost, mail (toggleable)
 
 ## Resources
 * Starter configs: [Misterio77: Nix Starter Config](https://github.com/Misterio77/nix-starter-configs)

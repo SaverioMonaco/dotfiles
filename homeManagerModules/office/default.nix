@@ -2,7 +2,9 @@
 { pkgs, lib, config, ... }:
 {
   imports = [
-     # ./
+     ./slack.nix
+     ./mattermost.nix
+     ./thunderbird.nix
   ];
 
   slack.enable = lib.mkDefault false;

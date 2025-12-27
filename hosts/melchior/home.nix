@@ -9,6 +9,9 @@
   brave.enable = true;
   vscode.enable = true;
   latex.enable = true;
+  slack.enable = true;
+  mattermost.enable = true;
+  thunderbird.enable = true;
 
   home.username = "samonaco";
   home.homeDirectory = "/home/samonaco";
