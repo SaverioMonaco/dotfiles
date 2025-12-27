@@ -6,9 +6,6 @@
     
   # minecraft.enable = true;
   # discord.enable = true;
-  brave.enable = true;
-  vscode.enable = true;
-  latex.enable = true;
 
   home.username = "samonaco";
   home.homeDirectory = "/home/samonaco";

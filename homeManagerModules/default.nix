@@ -12,5 +12,5 @@
       ./hypr
     ];
     
-  brave.enable = lib.mkDefault true;
+  brave.enable = lib.mkDefault false;
 }

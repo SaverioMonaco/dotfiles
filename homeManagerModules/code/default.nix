@@ -2,11 +2,9 @@
 {
   imports = [
     ./vscode.nix
+    ./latex.nix
   ];
 
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    # Code
-    texlive.combined.scheme-full
-  ];
+  vscode.enable = lib.mkDefault false;
+  latex.enable = lib.mkDefault false;
 }
