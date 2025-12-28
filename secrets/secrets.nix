@@ -1,1 +1,5 @@
-# no secrets yet
+{
+  age.secrets.hearthstone-key = {
+    file = ./token-hearthstone.age;
+  };
+}

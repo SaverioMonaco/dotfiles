@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, config, ... }:
 {
   imports = [
     ./git.nix
+    inputs.agenix.homeManagerModules.default
+    # Secrets
+    ../../secrets/secrets.nix
   ];
 
   # Packages that should be installed to the user profile.
@@ -16,6 +19,7 @@
     which
     bat # better cat
     btop  # replacement of htop/nmon
+    tree
     
     # Files
     kdePackages.dolphin # This is the actual dolphin package

@@ -1,8 +1,6 @@
 { inputs, pkgs, lib, ... }:
 {
     imports = [
-        inputs.agenix.nixosModules.default
-
         ./fonts.nix
         ./gnome.nix
         ./hyprland.nix

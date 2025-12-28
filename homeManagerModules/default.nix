@@ -7,10 +7,11 @@
 
       ./core 
       ./code 
-      ./fun
       ./terminal
       ./hypr
+      ./fun
     ];
     
   brave.enable = lib.mkDefault false;
+
 }
