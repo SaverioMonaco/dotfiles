@@ -31,7 +31,7 @@ in {
       lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         # Make sure required tools are on PATH
         TOKEN_FILE="${hearthstoneDir}/hearthstone/token"
-        if [ ! -f "$TOKEN_FILE" ]; then
+        if [[ ! -f "$TOKEN_FILE" && -f "$HOME/.config/age/keys.txt" ]]; then
           export PATH=${lib.makeBinPath [
             pkgs.age
           ]}:$PATH
@@ -56,7 +56,7 @@ in {
           TOKEN_DST="${hearthstoneDir}/login/token-hearthstone.txt"
           # Only decrypt/copy if destination doesn't exist
           if [ ! -f "$TOKEN_DST" ]; then
-            age --decrypt -i ~/.config/age/keys.txt $TOKEN_SRC > "$TOKEN_DST"
+            age --decrypt -i "$HOME/.config/age/keys.txt" $TOKEN_SRC > "$TOKEN_DST"
             chmod 600 "$TOKEN_DST"
           fi
         fi
