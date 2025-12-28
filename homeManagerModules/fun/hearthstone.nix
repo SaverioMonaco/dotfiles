@@ -1,11 +1,15 @@
+# To install
+# Run (inside folder):
+# nix-shell --extra-experimental-features flakes -p gcc gnumake pkg-config gtk3 cryptopp webkitgtk_4_1 python3 python3Packages.virtualenv git curl binutils --run "bash ./craft.sh"
+
 { lib, config, pkgs, ... }:
 
 let
   hearthstoneSrc = pkgs.fetchFromGitHub {
-    owner = "SaverioMonaco";
+    owner = "0xf4b1";
     repo = "hearthstone-linux";
     rev = "master";
-    sha256 = "IK7HS8MPk9YXoMWMrO6a3Y/dMlhxgShtvxiA/tYucmc=";
+    sha256 = "kisoamsMSQ2UPXASU64FHZacpz27yole0ebU52yMAPw=";
   };
 
   kegSrc = pkgs.fetchFromGitHub {
@@ -31,10 +35,7 @@ in {
       lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         # Make sure required tools are on PATH
         TOKEN_FILE="${hearthstoneDir}/hearthstone/token"
-        if [[ ! -f "$TOKEN_FILE" && -f "$HOME/.config/age/keys.txt" ]]; then
-          export PATH=${lib.makeBinPath [
-            pkgs.age
-          ]}:$PATH
+        if [[ ! -f "$TOKEN_FILE" ]]; then
           # Install Hearthstone
           if [ ! -d "${hearthstoneDir}" ]; then
             echo "Installing hearthstone-linux into home directory"
@@ -49,17 +50,18 @@ in {
             cp -r ${kegSrc}/* "${hearthstoneDir}/keg"
           fi
           chmod -R u+rwX "${hearthstoneDir}"
-
-          # Decrypt token via agenix
-          DOTFILES_DIR="${config.home.homeDirectory}/.dotfiles"
-          TOKEN_SRC="$DOTFILES_DIR/secrets/token-hearthstone.age"
-          TOKEN_DST="${hearthstoneDir}/login/token-hearthstone.txt"
-          # Only decrypt/copy if destination doesn't exist
-          if [ ! -f "$TOKEN_DST" ]; then
-            age --decrypt -i "$HOME/.config/age/keys.txt" $TOKEN_SRC > "$TOKEN_DST"
-            chmod 600 "$TOKEN_DST"
-          fi
         fi
+
+        cat <<EOF >$HOME/.local/share/applications/hearthstone.desktop
+        [Desktop Entry]
+        Type=Application
+        Name=Hearthstone
+        Path=${hearthstoneDir}/hearthstone/
+        Exec=steam-run Bin/Hearthstone.x86_64
+        Icon=${hearthstoneDir}/hearthstone/Bin/Hearthstone_Data/Resources/PlayerIcon.icns
+        Categories=Game;
+        StartupWMClass=Hearthstone.x86_64
+        EOF
       '';
   };
 }
