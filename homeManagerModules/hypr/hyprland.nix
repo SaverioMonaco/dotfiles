@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     hyprpicker
     wayland
+    rofi
   ];
 
   wayland.windowManager.hyprland = {
