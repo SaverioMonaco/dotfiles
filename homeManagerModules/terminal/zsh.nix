@@ -9,6 +9,21 @@
       # Case-insensitive tab completion
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
       eval "$(zoxide init zsh)"
+      
+      # For Joker keyboard backlight control
+      itekb() {
+        if [ -z "$1" ]; then
+          echo "Usage: kb <brightness> [color]"
+          return 1
+        fi
+        if [ -z "$2" ]; then
+              local COLOR="white"
+            else
+              local COLOR="$2"
+            fi
+
+        ite8291r3-ctl monocolor -b "$1" --name "$COLOR"
+      }
     '';
 
     shellAliases = {

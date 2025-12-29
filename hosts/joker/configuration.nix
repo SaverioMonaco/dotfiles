@@ -11,10 +11,6 @@
       
       # Shared configurations
       ./../../nixosModules
-
-      ./boot.nix
-      ./io/monitor.nix
-      ./io/touchpad.nix
     ];
 
   hyprland.enable = true;
