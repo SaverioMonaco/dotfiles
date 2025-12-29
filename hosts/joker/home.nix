@@ -9,8 +9,6 @@
   brave.enable = true;
   vscode.enable = true;
   latex.enable = true;
-  
-  hearthstone.enable = true;
 
   home.username = "samonaco";
   home.homeDirectory = "/home/samonaco";
