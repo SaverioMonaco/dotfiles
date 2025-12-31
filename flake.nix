@@ -30,6 +30,9 @@
     
     # Secrets management
     agenix.url = "github:ryantm/agenix";
+    
+    astal.url = "github:aylur/astal";
+    ags.url = "github:aylur/ags"; 
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

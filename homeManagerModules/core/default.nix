@@ -20,6 +20,7 @@
     bat # better cat
     btop  # replacement of htop/nmon
     tree
+    nh # nix cleaning
     
     # Files
     kdePackages.dolphin # This is the actual dolphin package
@@ -29,5 +30,9 @@
     vlc
     qimgv # image viewer
     evince # pdf
+    
+    # Youtube
+    yt-dlp
+    yewtube
   ];
 }

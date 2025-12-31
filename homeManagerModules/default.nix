@@ -4,6 +4,7 @@
       ./brave.nix
       ./nvim/nvchad.nix
       ./cursor.nix
+      ./torrent.nix
 
       ./core 
       ./code 
@@ -13,5 +14,6 @@
     ];
     
   brave.enable = lib.mkDefault false;
+  torrent.enable = lib.mkDefault false;
 
 }

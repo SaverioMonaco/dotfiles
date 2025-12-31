@@ -6,16 +6,11 @@
     };
 
     bind = [
-      # show keybinds list
-      "$mainMod, F1, exec, show-keybinds"
-
-      # keybindings
       "$mainMod, Z, exec, foot"
       "$mainMod, B, exec, brave"
       "$mainMod, Q, killactive,"
       "$mainMod, F, fullscreen, 0"
-      "$mainMod SHIFT, F, fullscreen, 1"
-      "$mainMod, Space, exec, toggle-float"
+      "$mainMod, Space, togglefloating"
       "$mainMod, E, exec, dolphin"
       "$mainMod, C ,exec, hyprpicker -a"
 

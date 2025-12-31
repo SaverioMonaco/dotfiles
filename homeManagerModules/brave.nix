@@ -8,7 +8,10 @@
     programs.brave = {
       enable = config.brave.enable;
       extensions = [
-        "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
+        "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
+        "ailoabdmgclmfmhdagmlohpjlbpffblp" # Surfshark
+        # Youtube
+        "ndpmhjnlfkgfalaieeneneenijondgag" # YouTube Anti Translate
       ];
     };
   };

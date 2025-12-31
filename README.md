@@ -2,6 +2,10 @@
 
 <div align="center">
 
+---
+⚠️ Still in progress ⚠️
+---
+
 ![nixos](https://img.shields.io/badge/NixOS-24273A.svg?style=flat&logo=nixos&logoColor=CAD3F5)
 ![hyprland](https://img.shields.io/badge/hyprland-stable-informational.svg?style=flat&logo=wayland&logoColor=eed49f&colorA=24273A&colorB=91d7e3)
 </div>
@@ -36,7 +40,6 @@ Add images
 | Internet Browser      | Brave + Vimium              |
 | Screenshot            | ???                         |
 | Recorder              | ???                         |
-| Color Picker          | Hyprpicker                  |
 | Clipboard             | ???                         |
 | Idle                  | ???                         |
 | Lock                  | ???                         |
@@ -45,9 +48,12 @@ Add images
 
 ## To Do
 - Add all missing components in Components
-- Hyprland
+    - Hyprland
+    - AGS
+
 - Update Oh-My-Posh colors
 - automatic collect garbage (boot option)
+
 - finish readme with images/showcase
 
 ## Resources
@@ -55,6 +61,10 @@ Add images
 * Modularization: [Vimjoier: Modularization video](https://www.youtube.com/watch?v=vYc6IzKvAJQ)
 * Hyprland configs: [fufexan's dotfiles](https://github.com/fufexan/dotfiles) 
 * Hyprland dotfiles: [JaKooLit's dotfiles](https://github.com/JaKooLit/Hyprland-Dots)
+* Hyprland dotfiles:[Aylur's dotfiles](https://github.com/Aylur/dotfiles)
+* Hyprland dotfiles:[Aylur's dotfiles](https://github.com/Aylur/dotfiles)
+* ags: [Github page](https://github.com/Aylur/ags)
+* ags Widgets: [Samar-exe dotfiles](https://github.com/Samar-exe/dotfiles)
 
 ## License
 

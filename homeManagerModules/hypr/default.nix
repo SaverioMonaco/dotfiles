@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hyprland.nix
@@ -9,5 +9,11 @@
     # ./windowrules.nix
     # ./hyprlock.nix
     # ./variables.nix
+    ./ags.nix
   ];
+
+  # Packages that should be installed to the user profile.
+  home.packages = with pkgs; [
+  ];
+
 }
