@@ -5,5 +5,6 @@
       ./monitor.nix
       ./touchpad.nix
       ./keybacklight.nix
+      ./nvidia.nix
     ];
 }

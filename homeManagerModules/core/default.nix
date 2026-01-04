@@ -20,6 +20,10 @@
     bat # better cat
     btop  # replacement of htop/nmon
     tree
+    pciutils
+    
+    
+    # Nix
     nh # nix cleaning
     
     # Files
@@ -30,6 +34,8 @@
     vlc
     qimgv # image viewer
     evince # pdf
+    pulseaudio # Audio
+    blueman # Bluetooth
     
     # Youtube
     yt-dlp

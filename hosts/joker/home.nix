@@ -9,7 +9,7 @@
   brave.enable = true;
   vscode.enable = true;
   latex.enable = true;
-  torrent.enable = true;
+  torrent.enable = false;
 
   home.username = "samonaco";
   home.homeDirectory = "/home/samonaco";
